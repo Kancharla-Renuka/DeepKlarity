@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://deepklarity-ddo9.onrender.com/$1"
+    }
+  ]
+}

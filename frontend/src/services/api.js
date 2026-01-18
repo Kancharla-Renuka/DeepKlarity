@@ -1,9 +1,7 @@
-const API_BASE_URL = 'http://localhost:8000';
+const API_BASE_URL = '/api';
 
 /**
  * Generate a quiz from a Wikipedia URL
- * @param {string} url - Wikipedia URL
- * @returns {Promise<Object>} Quiz data
  */
 export async function generateQuiz(url) {
   try {
@@ -28,7 +26,6 @@ export async function generateQuiz(url) {
 
 /**
  * Get quiz history
- * @returns {Promise<Array>} List of quiz history items
  */
 export async function getQuizHistory() {
   try {
@@ -47,8 +44,6 @@ export async function getQuizHistory() {
 
 /**
  * Get a specific quiz by ID
- * @param {number} quizId - Quiz ID
- * @returns {Promise<Object>} Quiz data
  */
 export async function getQuiz(quizId) {
   try {
@@ -64,6 +59,3 @@ export async function getQuiz(quizId) {
     throw new Error(error.message || 'Failed to fetch quiz');
   }
 }
-
-
-
